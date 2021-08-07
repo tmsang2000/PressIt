@@ -1,5 +1,6 @@
 import {BaseSetting} from './setting';
 import {BaseStyle} from './styles';
+import {Typography, FontWeight} from './typography';
 import {
     BaseColor
 } from './theme';
@@ -7,5 +8,7 @@ import {
 export {
     BaseSetting,
     BaseStyle,
-    BaseColor
+    BaseColor,
+    Typography,
+    FontWeight
 };

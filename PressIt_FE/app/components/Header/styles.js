@@ -1,9 +1,9 @@
 import { StyleSheet } from "react-native";
 
-export const styles = StyleSheet.create({
+export default StyleSheet.create({
     contain: {
         height: 45,
-        display: flex,
+        display: 'flex',
         flexDirection: 'row'
     },
     contentLeft: {

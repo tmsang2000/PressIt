@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
+import {Text} from '@components';
 import styles from "./styles";
 import PropTypes from 'prop-types';
 
@@ -29,7 +30,7 @@ export default function Header(props) {
         </View>
 
         <View style={[styles.contentCenter, styleCenter]}>
-            <Text numberOfLines={1}>
+            <Text headline numberOfLines={1}>
                 {title}
             </Text>
         </View>
@@ -47,7 +48,7 @@ export default function Header(props) {
     );
 }
 
-Header.PropTypes = {
+Header.propTypes = {
     style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
     styleLeft: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
     styleRight: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
@@ -67,5 +68,6 @@ Header.defaultProps = {
     renderLeft: () => {},
     renderRight: () => {},
     onPressRight: () => {},
-    onPressLeft: () => {}
+    onPressLeft: () => {},
+    title: 'Title'
 }
