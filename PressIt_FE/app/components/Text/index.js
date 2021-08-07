@@ -1,9 +1,10 @@
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
-import { Typography, FontWeight, BaseColor } from '@config';
+import { Typography, FontWeight, BaseColor, useTheme } from '@config';
 import PropTypes from 'prop-types';
 
 export default function Index(props) {
+    const { colors } = useTheme();
     const {
         // Text style
         header,

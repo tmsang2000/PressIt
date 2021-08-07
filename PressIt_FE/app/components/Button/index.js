@@ -1,11 +1,12 @@
 import React from 'react';
 import { TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native';
-import { BaseColor } from "@config";
+import { BaseColor, useTheme } from "@config";
 import PropTypes from "prop-types";
 import { Text } from "@components";
 import styles from "./styles";
 
 export default function Button(props) {
+    const { colors } = useTheme();
     const {
         style,
         styleText,
@@ -24,10 +25,10 @@ export default function Button(props) {
             {...rest}
             style={StyleSheet.flatten([
                 styles.default,
-                {backgroundColor: BaseColor.orangeColor},
+                {backgroundColor: colors.primary},
                 outline && [
                     styles.outline,
-                    { backgroundColor: BaseColor.orangeColor, borderColor: BaseColor.orangeColor }
+                    { backgroundColor: colors.card, borderColor: colors.primary }
                 ],
                 full && styles.full,
                 round && styles.round,
@@ -41,7 +42,7 @@ export default function Button(props) {
             <Text
                 style={StyleSheet.flatten([
                     styles.textDefault,
-                    outline && { color: BaseColor.whiteColor },
+                    outline && { color: colors.primary },
                     styleText
                 ])}
                 numberOfLines={1}
@@ -52,7 +53,7 @@ export default function Button(props) {
             {loading ? (
                 <ActivityIndicator
                     size="small"
-                    color={BaseColor.whiteColor}
+                    color={outline ? colors.primary : BaseColor.whiteColor}
                     style={{ paddingLeft: 5 }}
                 />
             ) : null}

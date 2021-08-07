@@ -33,16 +33,16 @@ export default class Setting extends Component {
           onPressLeft={() => {this.props.navigation.goBack()}}
         />
         <View style={styles.contain}>
-          <Button style={{width: '50%'}}>
-            Level
-          </Button>
           <Button style={{width: '50%', marginTop: 20}}>
             Language
           </Button>
           <Button style={{width: '50%', marginTop: 20}}>
             Dark mode
           </Button>
-          <Button style={{width: '50%', marginTop: 20}}>
+          <Button 
+            style={{width: '50%', marginTop: 20}}
+            onPress={() => {this.props.navigation.navigate("Color")}}
+          >
             Color
           </Button>
         </View>
