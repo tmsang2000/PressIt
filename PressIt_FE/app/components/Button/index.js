@@ -21,6 +21,7 @@ export default function Button(props) {
 
     return (
         <TouchableOpacity
+            {...rest}
             style={StyleSheet.flatten([
                 styles.default,
                 {backgroundColor: BaseColor.orangeColor},

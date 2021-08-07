@@ -18,15 +18,20 @@ export default class Home extends Component {
   render() {
     return (
       <SafeAreaView style={BaseStyle.safeAreaView} forceInset={{top: 'always'}}>
-        <Header title="Press It"/>
+        <Header 
+          title="Press It"
+        />
         <View style={styles.contain}>
-          <Button style={{width: '50%'}}>
+          <Button
+            onPress={() => {this.props.navigation.navigate("Play")}} 
+            style={{width: '50%'}}
+          >
             Play
           </Button>
-          <Button style={{width: '50%', marginTop: 20}}>
-            Guide
-          </Button>
-          <Button style={{width: '50%', marginTop: 20}}>
+          <Button 
+            onPress={() => {this.props.navigation.navigate("Setting")}}
+            style={{width: '50%', marginTop: 20}}
+          >
             Setting
           </Button>
         </View>
