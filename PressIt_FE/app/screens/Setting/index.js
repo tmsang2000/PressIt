@@ -35,7 +35,10 @@ export default function Setting(props) {
         >
           {t('language')}
         </Button>
-        <Button style={{width: '50%', marginTop: 20}}>
+        <Button 
+          style={{width: '50%', marginTop: 20}}
+          onPress={() => {props.navigation.navigate("DarkMode")}}
+        >
           {t('dark_mode')}
         </Button>
         <Button 

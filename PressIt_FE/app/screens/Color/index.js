@@ -86,7 +86,7 @@ export default function Color({navigation}) {
     return (
         <SafeAreaView style={BaseStyle.safeAreaView} forceInset={{top: 'always'}}>
             <Header
-                title={t('Color')}
+                title={t('color')}
                 renderLeft={() => {
                     return (
                     <Icon

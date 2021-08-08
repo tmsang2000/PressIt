@@ -3,12 +3,13 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Main from 'app/navigation/main';
 import {StatusBar} from 'react-native';
-import {BaseColor} from '@config';
 import i18n from 'i18next';
 import {initReactI18next} from 'react-i18next';
 import {useSelector} from 'react-redux';
 import {useTheme, BaseSetting} from '@config';
 import {DarkModeProvider, useDarkMode} from 'react-native-dark-mode';
+
+import DarkMode from '@screens/DarkMode';
 
 const RootStack = createStackNavigator();
 
@@ -36,7 +37,7 @@ export default function Navigator() {
 
   return (
     <DarkModeProvider>
-      <NavigationContainer>
+      <NavigationContainer theme={theme}>
           <RootStack.Navigator
             mode="modal"
             initialRouteName="Main"
@@ -45,6 +46,15 @@ export default function Navigator() {
             <RootStack.Screen 
                 name="Main" 
                 component={Main} 
+            />
+            <RootStack.Screen
+              name="DarkMode"
+              component={DarkMode}
+              gestureEnabled={false}
+              options={{
+                cardStyleInterpolator: forFade,
+                cardStyle: {backgroundColor: 'rgba(0, 0, 0, 0.5)'},
+              }}
             />
           </RootStack.Navigator>
       </NavigationContainer>

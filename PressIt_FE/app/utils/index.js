@@ -3,6 +3,15 @@ import {
 } from 'react-native';
 import RNRestart from 'react-native-restart';
 
+export function channingActions(currentActions, dispatch, ...actionGenerators) {
+  return actionGenerators.reduce((accActions, actionGenerator) => {
+    return {
+      ...actionGenerator(accActions, dispatch),
+    };
+  }, currentActions);
+}
+
+
 export const languageFromCode = (code) => {
   switch (code) {
     case 'en':

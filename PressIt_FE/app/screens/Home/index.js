@@ -27,7 +27,7 @@ export default function Home(props) {
           onPress={() => {props.navigation.navigate("Setting")}}
           style={{width: '50%', marginTop: 20}}
         >
-          {t('Setting')}
+          {t('setting')}
         </Button>
       </View>
     </SafeAreaView>

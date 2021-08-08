@@ -11,5 +11,13 @@
     "blue": "Blue",
     "green": "Green",
     "yellow": "Yellow",
-    "save": "Save"
+    "save": "Save",
+    "apply": "Apply",
+    "change_language_successfully": "Change Language Successfully",
+    "change_theme_successfully": "Change Theme Successfully",
+    "dynamic_system": "Dynamic System",
+    "always_on": "Always On",
+    "always_off": "Always Off",
+    "change_mode_successfully": "Change Dark Mode Successfully",
+    "cancel": "Cancel"
 }

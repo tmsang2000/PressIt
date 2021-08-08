@@ -11,5 +11,13 @@
     "blue": "Xanh Dương",
     "green": "Xanh Lá",
     "yellow": "Vàng",
-    "save": "Lưu"
+    "save": "Lưu",
+    "apply": "Áp dụng",
+    "change_language_successfully": "Đổi Ngôn Ngữ Thành Công",
+    "change_theme_successfully": "Đổi Màu Sắc Thành Công",
+    "dynamic_system": "Tự Động",
+    "always_on": "Luôn Bật",
+    "always_off": "Luôn Tắt",
+    "change_mode_successfully": "Đổi Chế Độ Tối Thành Công",
+    "cancel": "Hủy bỏ"
 }

@@ -72,6 +72,7 @@ export default function Index(props) {
         bold && {fontWeight: FontWeight.bold},
         heavy && {fontWeight: FontWeight.heavy},
         black && {fontWeight: FontWeight.black},
+        {color: colors.text},
         primaryColor && {color: colors.primary},
         darkPrimaryColor && {color: colors.primaryDark},
         lightPrimaryColor && {color: colors.primaryLight},
