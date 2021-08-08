@@ -35,7 +35,7 @@ export default function Header(props) {
             </Text>
         </View>
 
-        <View style={{flex: 1}}>
+        <View style={styles.right}>
             <TouchableOpacity
                 style={[styles.contentRight, styleRight]}
                 onPress={onPressRight}

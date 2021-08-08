@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, SafeAreaView, TouchableOpacity } from 'react-native';
 import {BaseStyle, BaseColor, useTheme} from '@config';
 import styles from './styles';
+import {useTranslation} from 'react-i18next';
 import {
   Header,
   Text,
@@ -10,6 +11,7 @@ import {
 } from '@components';
 
 export default function Play(props) {
+  const {t} = useTranslation();
   const [gameState, setGameState] = useState([
     [null, null, null],
     [null, null, null],
@@ -116,7 +118,7 @@ export default function Play(props) {
           style={{marginTop: 20, width: '50%'}}
           onPress={() => {restartGame()}}
         >
-          New Game
+          {t("new_game")}
         </Button>
       </View>
       

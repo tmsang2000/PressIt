@@ -6,36 +6,30 @@ import {
   Header,
   Button
 } from '@components';
+import {useTranslation} from 'react-i18next';
 
-export default class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+export default function Home(props) {
+  const {t} = useTranslation();
 
-    };
-  }
-
-  render() {
-    return (
-      <SafeAreaView style={BaseStyle.safeAreaView} forceInset={{top: 'always'}}>
-        <Header 
-          title="Press It"
-        />
-        <View style={styles.contain}>
-          <Button
-            onPress={() => {this.props.navigation.navigate("Play")}} 
-            style={{width: '50%'}}
-          >
-            Play
-          </Button>
-          <Button 
-            onPress={() => {this.props.navigation.navigate("Setting")}}
-            style={{width: '50%', marginTop: 20}}
-          >
-            Setting
-          </Button>
-        </View>
-      </SafeAreaView>
-    );
-  }
+  return (
+    <SafeAreaView style={BaseStyle.safeAreaView} forceInset={{top: 'always'}}>
+      <Header 
+        title={t("press_it")}
+      />
+      <View style={styles.contain}>
+        <Button
+          onPress={() => {props.navigation.navigate("Play")}} 
+          style={{width: '50%'}}
+        >
+          {t('play')}
+        </Button>
+        <Button 
+          onPress={() => {props.navigation.navigate("Setting")}}
+          style={{width: '50%', marginTop: 20}}
+        >
+          {t('Setting')}
+        </Button>
+      </View>
+    </SafeAreaView>
+  );
 }
