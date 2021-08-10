@@ -8,4 +8,7 @@ export const FORCE_APPEARANCE = 'FORCE_APPEARANCE';
 export const CHANGE_LANGUAGE = 'CHANGE_LANGUAGE';
 export const SHOW_LOADING = 'SHOW_LOADING';
 export const HIDE_LOADING = 'HIDE_LOADING';
+// AUTH
+export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
 

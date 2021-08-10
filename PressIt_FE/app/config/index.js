@@ -1,6 +1,7 @@
 import {BaseSetting} from './setting';
 import {BaseStyle} from './styles';
 import {Typography, FontWeight} from './typography';
+import {Images} from './images';
 import {
     BaseColor,
     useTheme,
@@ -20,5 +21,6 @@ export {
     ThemeSupport,
     DefaultFont,
     Typography,
-    FontWeight
+    FontWeight,
+    Images
 };

@@ -89,7 +89,7 @@ export default function Play(props) {
   return (
     <SafeAreaView style={BaseStyle.safeAreaView} forceInset={{top: 'always'}}>
       <Header 
-        title="Play"
+        title={t("play")}
         renderLeft={() => {
           return (
             <Icon

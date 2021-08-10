@@ -19,5 +19,18 @@
     "always_on": "Luôn Bật",
     "always_off": "Luôn Tắt",
     "change_mode_successfully": "Đổi Chế Độ Tối Thành Công",
-    "cancel": "Hủy bỏ"
+    "cancel": "Hủy bỏ",
+    "list": "Danh sách",
+    "chat_room": "Phòng Chat",
+    "created_at": "Tạo vào",
+    "chat_group": "Nhóm Chat",
+    "edit": "Chỉnh sửa",
+    "remove": "Xóa",
+    "login": "Đăng Nhập",
+    "welcome_back_to": "Chào mừng trở lại",
+    "please_enter_your_account_information": "Vui lòng nhập thông tin đăng nhập.",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "continue": "Tiếp tục",
+    "log_out": "Đăng xuất"
 }

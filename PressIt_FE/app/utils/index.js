@@ -1,7 +1,9 @@
 import {
   I18nManager,
+  PixelRatio
 } from 'react-native';
 import RNRestart from 'react-native-restart';
+import moment from 'moment';
 
 export function channingActions(currentActions, dispatch, ...actionGenerators) {
   return actionGenerators.reduce((accActions, actionGenerator) => {
@@ -11,6 +13,27 @@ export function channingActions(currentActions, dispatch, ...actionGenerators) {
   }, currentActions);
 }
 
+export function formatRelativeTime(timestamp) {
+  return moment.unix(timestamp / 1000).fromNow();
+}
+
+export function formatTime(timestamp) {
+  return moment.unix(timestamp / 1000).format('LT');
+}
+
+export function formatDate(timestamp, pattern = 'DD/MM/YYYY') {
+  return moment.unix(timestamp / 1000).format(pattern);
+}
+
+export function formatDateTime(timestamp) {
+  return moment.unix(timestamp / 1000).format('DD/MM/YYYY HH:mm');
+}
+
+const scaleValue = PixelRatio.get() / 2;
+export const scaleWithPixel = (size, limitScale = 1.2) => {
+  const value = scaleValue > limitScale ? limitScale : scaleValue;
+  return size * value;
+};
 
 export const languageFromCode = (code) => {
   switch (code) {

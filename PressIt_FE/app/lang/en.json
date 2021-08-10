@@ -19,5 +19,18 @@
     "always_on": "Always On",
     "always_off": "Always Off",
     "change_mode_successfully": "Change Dark Mode Successfully",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "list": "List",
+    "chat_room": "Chat Room",
+    "created_at": "Created at",
+    "chat_group": "Chat Group",
+    "edit": "Edit",
+    "remove": "Remove",
+    "login": "Login",
+    "welcome_back_to": "Welcome back to",
+    "please_enter_your_account_information": "Please enter your acocunt information.",
+    "email": "Email",
+    "password": "Password",
+    "continue": "Continue",
+    "log_out": "Log out"
 }

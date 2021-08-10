@@ -4,6 +4,8 @@ import Button from "./Button";
 import Icon from "./Icon";
 import Loading from "./Loading";
 import PopUpNotification from "./PopUpNotification";
+import ListItem from "./ListItem";
+import Image from "./Image";
 
 export {
     Header,
@@ -11,5 +13,7 @@ export {
     Button,
     Icon,
     Loading,
-    PopUpNotification
+    PopUpNotification,
+    ListItem,
+    Image
 }
