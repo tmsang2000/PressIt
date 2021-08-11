@@ -6,6 +6,7 @@ import Loading from "./Loading";
 import PopUpNotification from "./PopUpNotification";
 import ListItem from "./ListItem";
 import Image from "./Image";
+import ChatItem from "./ChatItem";
 
 export {
     Header,
@@ -15,5 +16,6 @@ export {
     Loading,
     PopUpNotification,
     ListItem,
-    Image
+    Image,
+    ChatItem
 }

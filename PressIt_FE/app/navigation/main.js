@@ -9,6 +9,7 @@ import Color from '@screens/Color';
 import Language from '@screens/Language';
 import List from '@screens/List';
 import Login from '@screens/Login';
+import Chat from '@screens/Chat';
 
 const MainStack = createStackNavigator();
 
@@ -30,6 +31,7 @@ export default function Main() {
               <MainStack.Screen name="Color" component={Color}/>
               <MainStack.Screen name="Language" component={Language}/>
               <MainStack.Screen name="List" component={List}/>
+              <MainStack.Screen name="Chat" component={Chat}/>
             </>
           ) : (
             <>

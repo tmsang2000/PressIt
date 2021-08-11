@@ -54,13 +54,13 @@ export default function List(props) {
         <Header 
             title={t("list")}
             renderLeft={() => {
-                return (
-                <Icon
-                    name="arrow-left"
-                    size={20}
-                    color={colors.primary}
-                />
-                )
+              return (
+              <Icon
+                  name="arrow-left"
+                  size={20}
+                  color={colors.primary}
+              />
+              )
             }}
             onPressLeft={() => {props.navigation.goBack()}}
         />

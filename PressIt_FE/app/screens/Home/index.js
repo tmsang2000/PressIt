@@ -27,7 +27,7 @@ export default function Home(props) {
           {t('play')}
         </Button>
         <Button
-          onPress={() => {}} 
+          onPress={() => {props.navigation.navigate("Chat")}} 
           style={{width: '50%', marginTop: 20}}
         >
           {t('chat')}
