@@ -32,5 +32,6 @@
     "email": "Email",
     "password": "Password",
     "continue": "Continue",
-    "log_out": "Log out"
+    "log_out": "Log out",
+    "chat": "Chat"
 }

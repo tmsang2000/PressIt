@@ -27,6 +27,12 @@ export default function Home(props) {
           {t('play')}
         </Button>
         <Button
+          onPress={() => {}} 
+          style={{width: '50%', marginTop: 20}}
+        >
+          {t('chat')}
+        </Button>
+        <Button
           onPress={() => {props.navigation.navigate("List")}} 
           style={{width: '50%', marginTop: 20}}
         >

@@ -29,6 +29,16 @@ export default (state = initialState, action = {}) => {
         ...state,
         language: action.language,
       };
+    case actionTypes.SHOW_LOADING:
+      return {
+          ...state,
+          loading: true
+      };
+    case actionTypes.HIDE_LOADING:
+      return { 
+        ...state,
+        loading: false 
+      }
     default:
       return state;
   }

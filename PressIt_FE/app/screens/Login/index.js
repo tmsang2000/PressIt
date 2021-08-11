@@ -17,7 +17,7 @@ import {
 } from '@components';
 import {useTranslation} from 'react-i18next';
 import {useDispatch} from 'react-redux';
-import { AuthActions } from '@actions';
+import { AuthActions, ApplicationActions } from '@actions';
 
 export default function Login(props) {
   const {t} = useTranslation();
@@ -32,14 +32,18 @@ export default function Login(props) {
   const [password, setPassword] = useState('');
 
   const login = () => {
-    dispatch(AuthActions.onLogin({email: email, password: password}))
+    dispatch(ApplicationActions.onShowLoading())
+    setTimeout(
+    () => dispatch(AuthActions.onLogin({email: email, password: password}))
     .then(res => {
         console.log('Login successfully')
+        dispatch(ApplicationActions.onHideLoading())
         props.navigation.navigate('Home')
     })
     .catch(err => {
         console.log('Login failed')
-    })
+    }), 2000);
+    
   }
 
   return (
@@ -73,6 +77,7 @@ export default function Login(props) {
                 <View style={[styles.textInput, {backgroundColor: colors.card, borderColor: BaseColor.kashmir}]}>
                     <TextInput 
                         style={{fontSize: 16, color: colors.text}}
+                        placeholderTextColor={colors.text}
                         placeholder={t('email')}
                         value={email}
                         onChangeText={(text) => setEmail(text)}
@@ -81,6 +86,7 @@ export default function Login(props) {
                 <View style={[styles.textInput, {backgroundColor: colors.card, borderColor: BaseColor.kashmir}]}>
                     <TextInput 
                         style={{fontSize: 16, color: colors.text}}
+                        placeholderTextColor={colors.text}
                         placeholder={t('password')}
                         secureTextEntry={true}
                         value={password}

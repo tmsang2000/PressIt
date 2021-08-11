@@ -54,12 +54,12 @@ export default function ListItem(props) {
       </View>
       {iconPress ? (
         <View style={{backgroundColor: colors.card, width: 80, position: 'absolute', top: 12, right: 36, zIndex: 100}}>
-          <View style={{alignItems: 'center', padding: 5, borderBottomWidth: 1, borderBottomColor: colors.primary}}>
+          <View style={{alignItems: 'center', padding: 5, borderBottomWidth: 1, borderBottomColor: colors.text}}>
             <Text caption2 semibold>
               {t('edit')}
             </Text>
           </View>
-          <View style={{alignItems: 'center', padding: 5, borderBottomWidth: 1, borderBottomColor: colors.primary}}>
+          <View style={{alignItems: 'center', padding: 5}}>
             <Text caption2 semibold>
               {t('remove')}
             </Text>
